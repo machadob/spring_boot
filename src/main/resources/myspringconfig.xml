@@ -4,14 +4,34 @@
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean id="helloBean" class="com.example.manual.HelloWorld">
-        <property name="firstName" value="Burton" />
+        <!-- Example of injecting value from a properties file, firstName is defined in my.properties -->
+        <property name="firstName" value="${firstName}" />
+        <!-- Example of injecting a List -->
         <property name="myList">
             <list value-type="java.util.List">
-                <value>one</value>
-                <value>two</value>
-                <value>three</value>
-                <value>four</value>
+                <value>l-one</value>
+                <value>l-two</value>
+                <value>l-three</value>
+                <value>l-four</value>
             </list>
+        </property>
+
+        <property name="mySet">
+            <list value-type="java.util.Set">
+                <value>s-one</value>
+                <value>s-two</value>
+                <value>s-three</value>
+                <value>s-four</value>
+            </list>
+        </property>
+
+        <property name="myMap">
+            <map>
+                <entry key="Key 1" value="One" />
+                <entry key="Key 2" value="Two" />
+                <entry key="Key 3" value="Three" />
+                <entry key="Key 4" value="Four" />
+            </map>
         </property>
     </bean>
 

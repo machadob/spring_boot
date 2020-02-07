@@ -30,6 +30,8 @@ public class TestBean {
         System.out.println("House : " + h);
         System.out.println("HelloWorld : " + hello.getFirstName());
         System.out.println("HelloWorld List: " + hello.getMyList());
+        System.out.println("HelloWorld Set: " + hello.getMySet());
+        System.out.println("HelloWorld Map: " + hello.getMyMap());
         System.out.println("END");
     }
 }
