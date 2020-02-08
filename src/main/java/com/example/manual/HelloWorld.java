@@ -1,11 +1,15 @@
 package com.example.manual;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 public class HelloWorld {
     private String firstName;
+    @Value("Machado")
+    private String lastName;
     private List<String> myList;
     private Set<String> mySet;
     private Map<String, String> myMap;
@@ -16,6 +20,14 @@ public class HelloWorld {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public List<String> getMyList() {
